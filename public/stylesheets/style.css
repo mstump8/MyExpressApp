@@ -1,0 +1,126 @@
+* {
+  font-family: 'Times New Roman', 'Arial';
+}
+body {
+  padding: 50px;
+  color: white;
+  background-image: url('FPB11.jpeg');
+  background-position: center;
+  background-size: cover;
+  
+  
+  font-size: 25px;
+}
+a {
+  color: #abe7ff;
+}
+table {
+  border-collapse: collapse;
+}
+th {
+  background-color: rgb(191, 191, 191);
+  padding: 2em;
+  text-align: left;
+  border: 4px solid white;
+  padding: 2em;
+  height: 70px;
+  }
+  tr {
+  background-color: #9a1a9c;
+  padding: 2em;
+  text-align: left;
+  border: 4px solid white;
+  padding: 2em;
+  font-size: 20px;
+  }
+  td {
+  border: 4px solid white;
+  width: 250px;
+  padding: 2em;
+  font-size: 25pt;
+  }
+  #small-header {
+    text-align: center;
+    font-size: 30pt;
+    
+  }
+  #form {
+    text-align: center;
+    color: rgb(251, 127, 247);
+    
+  }
+  #leadedit-header {
+  font-size: 100pt;
+
+  }
+  #leaddisplay {
+    text-align: center;
+    font-size: 100px;
+    width: 100%;
+  }
+  #leaddisplay-header {
+    font-size: 100px;
+    
+  }
+
+  #fptdisplay {
+   text-align: center;
+   font-size: 100px;
+   width: 100%;
+
+  }
+
+  #title {
+    text-align: center;
+    font-size: 50pt;
+  }
+  #note {
+    display: flex;  
+    justify-content: center;  
+    color: white;
+    font-style: italic;
+    font-size: 25pt;
+    background-color: #9a1a9c;
+    
+
+  }
+  #editform {
+    font-size: 30px;
+    text-align: center;
+   width: 100%;
+   color: rgb(239, 111, 229);
+
+  }
+  #editformwords {
+    color: rgb(186, 30, 173);
+  }
+  #save {
+    color: rgb(117, 0, 109);
+    font-size: 25pt;
+  }
+  ::placeholder {
+    color: rgb(117, 0, 109);
+  }
+  #delete, #deletebutton {
+    color: white;
+    background-color: #960000;
+    display: flex;  
+    font-size: 20pt;
+  }
+  #delete {
+    background-color: #960000;
+    display: flex;  
+  }
+  #input {
+    color: rgb(117, 0, 109);
+    font-size: 25pt;
+  }
+  #back-button {
+    color: black;
+    background-color: #fbca42;
+    display: flex;  
+    font-size: 25pt;
+    text-align: center;
+    margin: auto;
+  }
+ 

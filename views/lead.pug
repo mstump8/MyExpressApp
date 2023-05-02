@@ -1,0 +1,30 @@
+extends layout 
+
+block content 
+
+  body
+    h1#leaddisplay-header Lead Display
+    table#leaddisplay
+      tr
+        td#viewing
+          span #{lead.id}
+        td#viewing
+          span #{lead.email}
+        td#viewing
+          span #{lead.name}
+        td#viewing
+          a(href="/lead/" + lead.id + "/edit") Edit
+        td#viewing
+          form(action="/lead/" + lead.id + "/delete", method="POST")
+            button#delete(type="submit") Delete
+        
+    br
+
+    button#back-button Go Back to Leads Page
+
+    script.
+      const backButton = document.getElementById('back-button');
+      backButton.addEventListener('click', () => {
+        window.location.href = '/leads';
+      });
+

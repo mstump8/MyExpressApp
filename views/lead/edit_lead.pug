@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+
+    body
+        h1#leadedit-header Lead Edit
+        br
+        p#note Please update users name or email. ID numbers will not be able to be updated.
+        br
+        form#editform(action="/lead/" + lead.id + "/edit", method = "POST")
+            input#editformwords(name="lead_id", type="id", placeholder="Enter your ID", value = lead.id)
+            input#editformwords(name="lead_name", type="name", placeholder="Enter your First name", value = lead.name)
+            input#editformwords(name="lead_email", type="email", placeholder="Enter your Email", value = lead.email)
+            button#save(type="submit") Save
+
+        br 
+    
+        button#back-button Go Back to Leads Page
+
+        script.
+            const backButton = document.getElementById('back-button');
+            backButton.addEventListener('click', () => {
+                window.location.href = '/leads';
+            });

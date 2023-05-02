@@ -1,0 +1,52 @@
+head 
+  title Morgan's Express
+body#backgroundimage
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  h1#title= title
+  <!--# for id, . for class -->
+  p#small-header Welcome to Morgan Stump's #{title}
+  br
+  p#note (Please note that ID numbers will not be able to be edited later on. Confirm your number prior to submitting.)
+  p#note (ID Numbers CANNOT be duplicated.)
+    form#form(action="/", method = "POST")
+      input#input(name="lead_id", type="name", placeholder="Enter your ID")
+      br
+      br
+      input#input(name="lead_name", type="name", placeholder="Enter your First name")
+      br 
+      br
+      input#input(name="lead_email", type="email", placeholder="Enter your Email")
+      br
+      br
+      button#save(type="submit") Submit me
+  br
+
+  button#back-button Go To Leads Page
+
+    script.
+      const backButton = document.getElementById('back-button');
+      backButton.addEventListener('click', () => {
+        window.location.href = '/leads';
+      });
+br
+
+if leads
+  h1 Leads
+  table#fptdisplay
+    for lead in leads
+      tr(id=lead.id)
+        td <span> #{lead.id}</span> 
+        td <span> #{lead.email}</span>
+        td <span> #{lead.name}</span>
+        td
+          a(href="/lead/" + lead.id) Details from Morgan Stump
+          button#deletebutton(onclick=`deleteLead('${lead.id}')`) Delete
+            script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+            script(src='/javascripts/leads.js')
+  
+
+  
+ 
+
+
+      
